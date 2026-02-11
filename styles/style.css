@@ -16,7 +16,7 @@
   align-items: center;
   padding-block: 100px;
   color: var(--accent-color);
-  font-family: var(--main-font), sans-serif;
+  font-family: var(--main-font);
   background:
     var(--main-gradient),
     var(--overlay-gradient) center / cover;
@@ -39,7 +39,7 @@
   margin-block-end: 100px;
   border: var(--element-border);
   padding-block: clamp(122px, 0.75vw + 119.2px, 130px);
-  font-family: var(--accent-font), sans-serif;
+  font-family: var(--accent-font);
   font-weight: normal;
   background-color: #fff;
 }
@@ -154,7 +154,7 @@
 .card__like-button {
   margin: auto;
   padding-block: 10.5px;
-  inline-size: 130px;
+  min-inline-size: 130px;
 }
 
 .save-btn {
@@ -213,6 +213,7 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 150%;
+  text-transform: uppercase;
 }
 
 .close-dialog-btn {
@@ -250,8 +251,11 @@
 }
 
 .button:focus {
-  box-shadow: 2px 2px 0 var(--accent-color);
   outline: none;
+}
+
+.button:focus-visible {
+  box-shadow: 2px 2px 0 var(--accent-color);
 }
 
 .button::after {
